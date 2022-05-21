@@ -1145,7 +1145,7 @@ font-size: 1.2rem;
       display: block;
   }
   .navbar.active{
-      transition: 1.2s;
+      transition: 1.5s;
       top: 100%;
 
   }
