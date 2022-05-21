@@ -1,0 +1,544 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik' , sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+
+:root{
+    --btn-bg: #121e38;
+    --1st-main-bg: #0e2e47;
+    --2nd-main-bg: #1E5F74;
+    --text-color: #FCDAB7;
+    --bg-color: #030c20;
+    --about-p: #8FD6E1;
+}
+
+body{
+    background: var(--bg-color);
+}
+
+header{
+    position: sticky;            
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+    padding: 24px 14%;
+    transition: .3s;
+}
+
+/* Nav Bar Logo */
+.logo{
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+span{
+    color: var(--2nd-main-bg);
+}
+
+/* PAPER INFO HEADING */
+.paper-info{
+    padding-top: 2rem;
+    width: 100%;
+    text-align: center;
+    color: var(--about-p);
+}
+
+.paper-info h1{
+font-size: 2rem;
+font-weight: 600;
+letter-spacing: 3px;
+}
+
+.paper-info h1 i{
+    font-size: 2rem;
+}
+
+.paper-info h2{
+line-height: 3rem;
+font-size: 1.5rem;
+font-weight: 500;
+letter-spacing: 2px;
+}
+
+
+.questions-list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+table tr{
+    height: auto;
+    background: var(--btn-bg);
+}
+
+table tr td{
+    color: var(--text-color);
+}
+table td{
+padding: 1rem;
+}
+
+
+
+.questions-list a{
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+.ques{
+    width: 750px;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.ques a{
+    line-height: 1.5rem;
+    font-weight: 500;
+    cursor: text;
+}
+
+.code-btn{
+    width: 200px;
+    text-align: center;
+}
+.code-btn a:hover{
+    background-image: linear-gradient(90deg, #40fecb 0%, #095aab 100%); 
+    color: var(--bg-color);
+    padding: .5rem;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* FOOTER */
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--btn-bg);
+    height: auto;
+}
+
+hr{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: var(--2nd-main-bg);
+}
+
+.links{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+.links h3{
+    color: var(--text-color);
+}
+
+.important-links, .support-us{
+    width: 100%;
+}
+
+.important-links h3, .support-us h3{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.important-links a{
+    color: var(--about-p);
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+.important-links a:hover{
+    text-decoration: underline; 
+    transition: .5s;
+}
+.important-links a li i{
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+
+.support-us p{
+    color: var(--about-p);
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.discord-api{
+    width: 45%;
+    display: flex;
+    justify-content: right;
+}
+
+
+.links, .discord-api{
+    margin: 2rem;
+}
+
+
+
+
+
+
+/* COPYRIGHT SECTION */
+
+.copyright{
+    height: 200px;
+    padding: 5rem;
+  }
+  
+  .copyright p{
+    color: var(--about-p);
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+  
+  .copyright a{
+    color: var(--about-p);
+  }
+  
+  .copyright a:hover{
+      padding: 2px;
+    background-image: linear-gradient(90deg, #40fecb 0%, #095aab 100%); 
+    border-radius: 4px;
+    transition: .4s;
+    color: var(--bg-color);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*----------------------------------------------------------------ALL MEDIA QUERIES----------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------SMALL LAPTOP VIEW RESPONSIVENESS------------------------------------------------------------- */
+  @media (max-width: 1081px){
+    .questions-list{
+        padding: 1.5rem;
+    }
+    .questions-list a{
+        font-weight: 500;
+    }
+
+  }
+
+
+
+/* ----------------------------------------------------TABLET VIEW RESPONSIVENESS------------------------------------------------------------------ */
+
+  @media (max-width: 960px){
+    .questions-list{
+        padding: 1.2rem;
+    }
+    .questions-list a{
+        font-weight: 500;
+    }
+    .code-btn a:hover{
+        /* text-decoration: underline; */
+        background-image: var(--1st-main-bg); 
+        color: var(--about-p);
+        padding: 0;
+        border-radius: none;
+        transition: .3s;
+    }
+
+
+    .footer-container{
+        flex-direction: column;
+        height: auto;
+        padding-right: 2rem;
+    }
+
+    .links, .discord-api{
+            width: 100%;
+            padding-right: 4rem;
+    }
+
+    .links h3, .support-us h3{
+        text-align: center;
+    }
+
+    .support-us p{
+        text-align: justify;
+        font-size: 1.5rem;
+    }
+
+    .important-links a{
+        font-size: 1.5rem;
+    }
+
+    .discord-api{
+        height: 480px;
+    }
+
+    .copyright{
+        padding: 3rem;
+      }
+
+ }
+
+  @media (max-width: 770px){
+    .questions-list{
+        padding: .8rem;
+    }
+
+    .code-btn{
+        display: none;
+    }
+
+    .ques a{
+        cursor: pointer;
+        line-height: normal;
+    }
+    .ques a:hover{
+       text-decoration: underline;
+       color: var(--about-p);
+       transition: .3s;
+    }
+
+    .support-us p{
+        font-size: 1.3rem;
+    }
+  }
+
+
+  @media (max-width: 600px) {
+
+    .paper-info h1{
+            font-size: 1.5rem;
+    }
+    .paper-info h1 i{
+        font-size: 1.5rem;
+}
+    .paper-info h2{
+        font-size: 1.2rem;
+    }
+
+    .questions-list a{
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: .8rem;
+    }
+    
+     .ques a{
+         font-size: .8rem;
+         line-height: 1.3rem;
+     }
+
+    .support-us p{
+        font-size: 1.1rem;
+    }
+    .footer-container{
+        padding-right: 1rem;
+        overflow: hidden;
+    }
+
+    .links, .discord-api{
+        width: 100%;
+        padding-right: 5rem;
+}
+
+.support-us, .important-links{
+    padding: 0;
+}
+
+    .support-us p{
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+
+    .important-links a{
+        font-size: 1.1rem;
+    }
+
+    .copyright{
+        padding: 3rem;
+      }
+    
+      .copyright p{
+          font-size: .8rem;
+          letter-spacing: 1.5px;
+          word-spacing: normal;
+      }
+  }
+
+
+
+
+
+/* ----------------------------------------------------MOBILE VIEW RESPONSIVENESS------------------------------------------------------------------ */
+
+  @media (max-width: 480px){
+      main{
+          padding: 0;
+      }
+.paper-info h1{
+    font-size: 1.4rem;
+}
+.paper-info h1 i{
+    font-size: 1.4rem;
+}
+.paper-info h2{
+    font-size: .8rem;
+}
+
+    .questions-list{
+        padding: 0;
+        width: 100%;
+    }
+    .questions-list a{
+        font-size: .8rem;
+        font-weight: 500;
+        line-height: 1rem;
+    }
+    table{
+        margin: 0;
+        padding: 0;
+    }
+    table tr{
+        margin-right: 0;
+    }
+    .q_no, .ques{
+        margin: 0;
+    }
+    .q_no{
+        font-size: 1rem;
+    }
+    .ques{
+        padding: .8rem;
+        line-height: 1rem;
+    }
+   
+
+    .footer-container{
+        padding: 0;
+    }
+    .links, .discord-api{
+        padding-right: 3.8rem;
+    }
+
+    .links h3, .support-us h3{
+        font-size: 1.7rem;
+    }
+    .support-us p{
+        font-size: .8rem;
+    }
+    
+    .important-links a li{
+        font-size: .9rem;
+        line-height: 1.3rem;
+    }
+    .important-links a li i{
+        font-size: 1.2rem;
+    }
+
+    .copyright{
+        height: 15vh;
+        padding: 0;
+        padding-top: 2rem;
+    }
+    .copyright p{
+        line-height: 1rem;
+        font-size: .7rem;
+    }
+   
+  }
+
+
+  @media (max-width: 350px){
+        .paper-info h1{
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+        }
+        .paper-info h1 i{
+            font-size: 1.2rem;
+        }
+        .paper-info h2{
+            letter-spacing: 1px;
+            font-size: .8rem;
+        }
+
+        .q_no{
+            display: none;
+        }
+        .ques{
+            padding-top: 1rem;
+
+        }
+        .ques a{
+            text-align: justify;
+        }
+
+        .links h3, .support-us h3{
+            font-size: 1.4rem;
+        }
+        .important-links{
+            padding: 0;
+        }
+        .important-links a li{
+            font-size: .8rem;
+            line-height: 1rem;
+        }
+        .important-links a li i{
+            font-size: 1rem;
+        }
+    
+
+        .copyright{
+            padding: 0;
+            padding-top: 2rem;
+        }
+        .copyright p{
+            line-height: 1rem;
+            font-size: .6rem;
+        }
+  }

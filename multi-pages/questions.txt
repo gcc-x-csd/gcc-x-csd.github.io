@@ -1,0 +1,28 @@
+Q-01)   Write a C/C++ program to reverse a given number.
+
+Q-02)   Write a C/C++ program to print the sum and product of digits of an integer.
+
+Q-03)   Write a C/C++ to compute the sum of the first n terms of the following series. S = 1 + 1/2 + 1/3 + 1/4 + . . . + n
+
+Q-04)   Write a C/C++ program to compute the sum of the first n terms of the series. S = 1 - 2 + 3 - 4 + 5 . . . n
+
+Q-05)   Write a function that checks whether a given string is palindrome or not.
+
+Q-06)   Write a function to find whether a given number is prime or not. Use the same function 
+to generate all the prime numbers less than 100.
+
+Q-07)   Write a C/C++ program to display Fibanocci Series:   (i) Using Recursion   (ii) Using Iteration
+
+Q-08)   Write a C/C++ program to calculate GCD of two numbers:   (i) Using Recursion   (ii) Using Iteration
+
+Q-09)   Write a C/C++ program to calculate Factorial of a given number:   (i) Using Recursion   (ii) Using Iteration
+
+Q-10)   Write a C/C++ program to compute the factors of a given number.
+
+Q-11)   Write a C/C++ program that swaps two numbers using pointers.
+
+Q-12)   Write a C++ program that create a class and to perform swapping of two numbers without using third variable.
+
+Q-13)   Write a C++ program to create a structure Student containing fields for roll number, name, class, year and total marks. Create 10 students and display their records
+
+Q-14)   Write a C/C++ program that performs read and write operations in a file.
