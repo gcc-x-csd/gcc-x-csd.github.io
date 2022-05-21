@@ -1138,6 +1138,7 @@ font-size: 1.2rem;
   }
   .navbar a{
       display: block;
+      color: var(--about-p);
       padding: 1rem;
       font-size: 1.5rem;
       border-left: 3px solid var(--about-p);
@@ -1145,7 +1146,7 @@ font-size: 1.2rem;
       display: block;
   }
   .navbar.active{
-      transition: 1s;
+      transition: .6s;
       top: 100%;
 
   }
