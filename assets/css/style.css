@@ -1121,7 +1121,7 @@ font-size: 1.2rem;
 
   #menu-icon{
       display: block;
-      color: var(--text-color);
+      color: var(--about-p);
       text-align: right;
   }
   .navbar{
@@ -1140,7 +1140,7 @@ font-size: 1.2rem;
       display: block;
       padding: 1rem;
       font-size: 1.5rem;
-      border-left: 3px solid var(--text-color);
+      border-left: 3px solid var(--about-p);
       margin: .5rem;
       display: block;
   }
