@@ -205,7 +205,7 @@ h2{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 2rem;
+  /* padding: 2rem; */
   background-color: var(--btn-bg);
 }
 
@@ -349,7 +349,7 @@ h2{
     border: 2px solid #00ff75;
     background-color: var(--bg-color);
     border-radius: 20px;
-    /* transition: all .2s; */
+    transition: all .1s;
    }
    
    .card2:hover {
@@ -509,6 +509,13 @@ color: var(--bg-color);
   font-size: 1rem;
   font-weight: 600;
   color: var(--bg-color);
+}
+
+.about-dev p a{
+  color: #2200ff;
+}
+.about-dev p a:hover{
+  text-decoration: underline;
 }
 
 .imp-links ul{
@@ -1003,9 +1010,12 @@ font-size: 1.3rem;
         width: 100%;
         padding: .3rem;
     }
+    .cards-container{
+      padding-bottom: 3rem;
+    }
     .card {
         margin: 0;
-        margin-top: 1rem;
+        margin-top: 3rem;
        }
     
     .home h3{
@@ -1141,6 +1151,10 @@ color: var(--bg-color);
   text-align: justify;
   font-size: .8rem;
   font-weight: 600;
+}
+
+.imp-links{
+  overflow-x: hidden;
 }
 
 .imp-links ul{
