@@ -212,7 +212,7 @@ hr{
 /* COPYRIGHT SECTION */
 
 .copyright{
-    height: 200px;
+    height: 180px;
     padding: 5rem;
   }
   
@@ -405,7 +405,7 @@ hr{
     }
 
     .copyright{
-        padding: 3rem;
+        padding: 2rem;
       }
     
       .copyright p{
@@ -486,7 +486,6 @@ hr{
     }
 
     .copyright{
-        height: 15vh;
         padding: 0;
         padding-top: 2rem;
     }
