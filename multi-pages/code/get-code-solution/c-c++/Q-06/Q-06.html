@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C/C++ | Q-04</title>
+    <title>C/C++ | Q-06</title>
 
     <!-- CSS & ICONS -->
     <link rel="stylesheet" href="../assets/code-solution.css">
@@ -34,9 +34,8 @@
        <div class="heading" id="heading"> 
         <table>
         <tr>
-            <th class="q-no">Q-04: </th>
-            <th class="ques">Write a C/C++ program to compute the sum of the first n terms of the series. <br>
-              S = 1 - 2 + 3 - 4 + 5 . . . n</th>
+            <th class="q-no">Q-06: </th>
+            <th class="ques">Write a function to find whether a given number is prime or not. Use the same function to generate all the prime numbers less than 100.</th>
             
         </tr>
         </table>
@@ -45,61 +44,126 @@
 <div class="solution" id="solution">
 <pre>
     <h3>Using - C</h3>
-  <div class="btn" id="btn"><a href="Q-04.c" download="Q-04.c"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
+  <div class="btn" id="btn"><a href="Q-06.c" download="Q-06.c"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
   <hr>
     <code class="language-c">
-      #include<span><</span>stdio.h<span>></span>
-      void main() {
-        int n, i, sum=0;
-        printf("Enter the number of terms: ");
-        scanf("%d",&n);
-        
-        for(i=1; i<=n; i++){
-            if(i%2==0)
-              sum -= i;
-            else
-              sum += i;
-          }
-        
-        printf("Sum of the Series: %d",sum);
-        }
+#include<span><</span>stdio.h<span>></span>
+
+int checkPrime(int x);
+void printPrime(int range_start, int range_end);
+
+void main(){
+	int n,i;
+	printf("Enter a number: ");
+	scanf("%d",&n);
+	
+	if(checkPrime(n))
+		printf("%d is a prime number!\n",n);
+	else
+		printf("%d is not a prime number!\n",n);
+	
+	printf("\nPrinting all Prime Numbers upto 100: \n");
+	printPrime(1,100);	
+
+}
+
+
+int checkPrime(int x) {
+	int i;
+		if(x==1 || x==0)			// So that Program won't crash
+			return 0;
+		else {
+			for(i=2; i <= x/2; i++) {
+				if(x%i==0) {
+				return 0;
+				}
+			}
+		}
+	return 1;	
+}
+
+void printPrime(int range_start, int range_end) {
+	int i;
+	for(i=range_start; i <= range_end; i++) {
+		if(checkPrime(i)==1){
+			printf("%d   ",i);
+		}
+	}
+}
+
     </code>
 </pre>
 <div class="output" id="output"><h4>OUTPUT</h4>
 <pre class="output-pre">
-Enter the number of terms: 7
-Sum of the Series: 4
+Enter a number: 11
+11 is a prime number!
+  
+Printing all Prime Numbers upto 100:
+2    3    5    7    11    13    17    19    23    29    31    37    41    43    47    53    59    61    67    71    73    79    83    89    97
 </pre>
 </div>
 
     <pre>
         <h3>Using - C++</h3>
-        <div class="btn" id="btn"><a href="Q-04.cpp" download="Q-04.cpp"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
+        <div class="btn" id="btn"><a href="Q-06.cpp" download="Q-06.cpp"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
         <hr>
         <code class="language-cpp">
           #include<span><</span>iostream<span>></span>
-using namespace std;
-int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
-	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
-		
-	return 0;
-}
+          using namespace std;
+
+          class PrimeNumbers{
+            public: 
+            int checkPrime(int x);
+            void printPrime(int range_start, int range_end);
+          };
+          
+          int PrimeNumbers::checkPrime(int x) {
+              if(x==1 || x==0)			// So that Program won't crash
+                return 0;
+              else {
+                for(int i=2; i <= x/2; i++) {
+                  if(x%i==0) {
+                  return 0;
+                  }
+                }
+              }
+            return 1;	
+          }
+          
+          void PrimeNumbers::printPrime(int range_start, int range_end) {
+            for(int i=range_start; i <= range_end; i++) {
+              if(checkPrime(i)==1) {
+                cout<< i<< "   ";
+              }
+            }
+          }
+          
+          
+          int main(){
+            int n;
+            PrimeNumbers object;
+            cout<< "Enter a number: ";
+            cin>> n;
+              
+              if(object.checkPrime(n))
+                cout<< n<< " is a prime number!"<< endl;
+              else
+                cout<< n<< " is not a prime number!"<< endl;
+            
+            cout<< "\nPrinting all Prime Numbers upto 100: "<< endl;		
+            object.printPrime(1,100);
+            return 0;
+              
+          }
       </code>
 </pre>
 <div class="output" id="output"><h4>OUTPUT</h4>
 <pre class="output-pre">
-Enter the number of terms: 4
-Sum of the Series: -2
+Enter a number: 8
+8 is not a prime number!
+  
+Printing all Prime Numbers upto 100:
+2    3    5    7    11    13    17    19    23    29    31    37    41    43    47    53    59    61    67    71    73    79    83    89    97 
 </pre>
 </div>
 
@@ -112,9 +176,9 @@ Sum of the Series: -2
 
 <!-- NEXT PREVIIOUS BUTTONS -->
 <div class="next-prev" id="next-prev">
-  <a href="../Q-03/Q-03.html"><button>&larr; Previous</button></a>
+  <a href="../Q-05/Q-05.html"><button>&larr; Previous</button></a>
   <a href="https://gcc-x-csd.github.io/multi-pages/code/c_cpp.html"><button>List of all Questions</button></a>
-  <a href="../Q-05/Q-05.html"><button>Next &rarr;</button></a>
+  <a href="../Q-07/Q-07.html"><button>Next &rarr;</button></a>
 </div>
 </main>
 
