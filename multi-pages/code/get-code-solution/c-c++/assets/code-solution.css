@@ -184,7 +184,14 @@ button{
     width: 100%;
     padding: 0;
 }
+
+.next-prev .btn{
+    padding: 0;
+    width: 180px;
+}
+
 .next-prev a button{
+    margin: 0;
     cursor: pointer;
     text-align: center;
     font-size: 1rem;
@@ -444,6 +451,10 @@ iframe{
         flex-direction: column-reverse;
         padding: 0 3rem;
         width: 100%;
+    }
+    .next-prev .btn{
+        align-self: center;
+        margin: 1rem;
     }
     .next-prev a{
         text-align: center;

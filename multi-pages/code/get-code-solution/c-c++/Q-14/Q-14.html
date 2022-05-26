@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C/C++ | Q-04</title>
+    <title>C/C++ | Q-14</title>
 
     <!-- CSS & ICONS -->
     <link rel="stylesheet" href="../assets/code-solution.css">
@@ -34,72 +34,153 @@
        <div class="heading" id="heading"> 
         <table>
         <tr>
-            <th class="q-no">Q-04: </th>
-            <th class="ques">Write a C/C++ program to compute the sum of the first n terms of the series. <br>
-              S = 1 - 2 + 3 - 4 + 5 . . . n</th>
+            <th class="q-no">Q-14: </th>
+            <th class="ques">Write a C++ program to create a structure Student containing fields for roll number, name, class, year and total marks. Create 5 students and display their records.</th>
             
         </tr>
         </table>
     </div>
     
 <div class="solution" id="solution">
-<pre>
-    <h3>Using - C</h3>
-  <div class="btn" id="btn"><a href="Q-04.c" download="Q-04.c"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
-  <hr>
-    <code class="language-c">
-      #include<span><</span>stdio.h<span>></span>
-      void main() {
-        int n, i, sum=0;
-        printf("Enter the number of terms: ");
-        scanf("%d",&n);
-        
-        for(i=1; i<=n; i++){
-            if(i%2==0)
-              sum -= i;
-            else
-              sum += i;
-          }
-        
-        printf("Sum of the Series: %d",sum);
-        }
-    </code>
-</pre>
-<div class="output" id="output"><h4>OUTPUT</h4>
-<pre class="output-pre">
-Enter the number of terms: 7
-Sum of the Series: 4
-</pre>
-</div>
-
     <pre>
         <h3>Using - C++</h3>
-        <div class="btn" id="btn"><a href="Q-04.cpp" download="Q-04.cpp"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
+        <div class="btn" id="btn"><a href="Q-14.cpp" download="Q-14.cpp"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
         <hr>
         <code class="language-cpp">
-          #include<span><</span>iostream<span>></span>
+#include<span><</span>iostream<span>></span>
+#include<span><</span>string.h<span>></span>
 using namespace std;
+
+typedef struct Student{
+	int roll_no;
+	string name;
+	int std_class;
+	int year;
+	int total_marks;
+}Student;
+
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
-	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
+	int no_of_students = 5;
+	Student s[no_of_students];
+	int roll_no, std_class,total_marks, year;
+	string name;
 		
+	for(int i=0; i < no_of_students; i++){
+		cout<< "Enter Roll Number: ";		
+		cin>> roll_no;
+		s[i].roll_no = roll_no;
+		
+		cout<< "Enter Student Name: ";		
+		cin.ignore(); 
+		getline(cin,name);
+		s[i].name = name;
+		
+		cout<< "Enter Student Class: ";		
+		cin>> std_class;
+		s[i].std_class = std_class;
+		
+		cout<< "Enter Year: ";				
+		cin>> year;
+		s[i].year = year;
+		
+		cout<< "Enter Total Marks: ";		
+		cin>> total_marks;	
+		s[i].total_marks = total_marks;
+		
+		cout<< "\n"<< endl;
+	}
+	system("cls");
+	
+	cout<< "STUDENTS DETAILS:"<< endl;
+	cout<< "-----------------"<< endl;
+	for(int j=0; j < no_of_students; j++){
+		cout<< "Roll Number: "<< s[j].roll_no<< endl;	
+		cout<< "Student Name: "<< s[j].name<< endl;
+		cout<< "Student Class: "<< s[j].std_class<< endl;
+		cout<< "Year: "<< s[j].year<< endl;			
+		cout<< "Total Marks: "<< s[j].total_marks<< endl;
+		cout<< "\n"<< endl;
+	}
 	return 0;
 }
       </code>
 </pre>
 <div class="output" id="output"><h4>OUTPUT</h4>
 <pre class="output-pre">
-Enter the number of terms: 4
-Sum of the Series: -2
+Enter Roll Number: 1
+Enter Student Name: Anuj Das
+Enter Student Class: 12
+Enter Year: 2018
+Enter Total Marks: 567
+  
+  
+Enter Roll Number: 2
+Enter Student Name: Sneha Dey
+Enter Student Class: 12
+Enter Year: 2018
+Enter Total Marks: 578
+  
+  
+Enter Roll Number: 3
+Enter Student Name: Kaustav Purkayastha
+Enter Student Class: 12
+Enter Year: 2018
+Enter Total Marks: 550
+  
+  
+Enter Roll Number: 4
+Enter Student Name: Ishita Nag
+Enter Student Class: 12
+Enter Year: 2018
+Enter Total Marks: 567
+  
+  
+Enter Roll Number: 5
+Enter Student Name: Rupol Das
+Enter Student Class: 12
+Enter Year: 2018
+Enter Total Marks: 541
+
+
+(After Screen is cleared)
+
+-----------------------------------
+STUDENTS DETAILS:
+-----------------------------------
+Roll Number: 1
+Student Name: Anuj Das
+Student Class: 12
+Year: 2018
+Total Marks: 567
+
+
+Roll Number: 2
+Student Name: Sneha Dey
+Student Class: 12
+Year: 2018
+Total Marks: 578
+
+
+Roll Number: 3
+Student Name: Kaustav Purkayastha
+Student Class: 12
+Year: 2018
+Total Marks: 550
+
+
+Roll Number: 4
+Student Name: Ishita Nag
+Student Class: 12
+Year: 2018
+Total Marks: 567
+
+
+Roll Number: 5
+Student Name: Rupol Das
+Student Class: 12
+Year: 2018
+Total Marks: 541
+
 </pre>
 </div>
 
@@ -112,9 +193,9 @@ Sum of the Series: -2
 
 <!-- NEXT PREVIIOUS BUTTONS -->
 <div class="next-prev" id="next-prev">
-  <a href="../Q-03/Q-03.html"><button>&larr; Previous</button></a>
-  <a href="https://gcc-x-csd.github.io/multi-pages/code/c_cpp.html"><button>List of all Questions</button></a>
-  <a href="../Q-05/Q-05.html"><button>Next &rarr;</button></a>
+  <div class="btn"><a href="../Q-13/Q-13.html"><button>&larr; Previous</button></a></div>
+  <div class="btn"><a href="https://gcc-x-csd.github.io/multi-pages/code/c_cpp.html"><button>List of all Questions</button></a></div>
+  <div class="btn"><a href="../Q-15/Q-15.html"><button>Next &rarr;</button></a></div>
 </div>
 </main>
 
@@ -147,11 +228,11 @@ Sum of the Series: -2
         <div class="important-links" id="important-links">
           <h3>Important Links!</h3>
             <ul>
-              <a href="https://discord.gg/tfhM3h633M"><li data-aos="fade-right" data-aos-delay="200"> <i class='bx bxs-donate-heart'></i>Want To Contribute To This project?</li></a>
-              <a href="https://discord.gg/kUAxJFjxrX"><li data-aos="fade-right" data-aos-delay="400"> <i class='bx bx-line-chart'></i>Want To Improve Answers / Codes ?</li></a>
-              <a href="https://discord.gg/8vgUcA5z2g"><li data-aos="fade-right" data-aos-delay="600"> <i class='bx bxs-file-pdf'></i>Send Latest Question Papers Here!</li></a>
-              <a href="https://discord.gg/mJBPfPACpV"><li data-aos="fade-right" data-aos-delay="800"> <i class='bx bx-desktop'></i>Send Practical Questions Here!</li></a>
-              <a href="https://discord.gg/kEUXUv4W9f"><li data-aos="fade-right" data-aos-delay="1000"> <i class='bx bxl-discord-alt'></i>Join Discussion Here!</li></a>
+              <a href="https://discord.gg/tfhM3h633M"><li data-aos="fade-right" data-aos-delay="100"> <i class='bx bxs-donate-heart'></i>Want To Contribute To This project?</li></a>
+              <a href="https://discord.gg/kUAxJFjxrX"><li data-aos="fade-right" data-aos-delay="200"> <i class='bx bx-line-chart'></i>Want To Improve Answers / Codes ?</li></a>
+              <a href="https://discord.gg/8vgUcA5z2g"><li data-aos="fade-right" data-aos-delay="300"> <i class='bx bxs-file-pdf'></i>Send Latest Question Papers Here!</li></a>
+              <a href="https://discord.gg/mJBPfPACpV"><li data-aos="fade-right" data-aos-delay="400"> <i class='bx bx-desktop'></i>Send Practical Questions Here!</li></a>
+              <a href="https://discord.gg/kEUXUv4W9f"><li data-aos="fade-right" data-aos-delay="500"> <i class='bx bxl-discord-alt'></i>Join Discussion Here!</li></a>
             </ul>
         </div>
 </div>             

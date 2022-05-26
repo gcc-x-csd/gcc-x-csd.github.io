@@ -1,17 +1,29 @@
 #include<iostream>
 using namespace std;
+
+class Swapper {
+	public: 
+		void Swap(int *a, int *b);
+};
+
+void Swapper::Swap(int *a, int *b) {
+int temp = *a;
+	  *a = *b;
+	  *b = temp;
+}
+
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
+int a, b;
+Swapper object;
+	cout<< "Enter the value of a:  ";
+	cin>> a;
+	cout<< "Enter the value of b:  ";
+	cin>> b;
+	system("cls");
 	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
-		
+	cout<<"Before Swapping:  a = "<< a<< "  &  b = "<< b<<endl;
+	object.Swap(&a,&b);
+	cout<<"After Swapping :  a = "<< a<< "  &  b = "<< b<<endl;
+			
 	return 0;
 }

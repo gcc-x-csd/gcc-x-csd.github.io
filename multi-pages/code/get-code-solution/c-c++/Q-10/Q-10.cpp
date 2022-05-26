@@ -1,17 +1,16 @@
 #include<iostream>
 using namespace std;
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
+    int n;
+	cout<< "Enter the number of lines(rows):  ";
 	cin>> n;
 	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
+	for(int i=1; i <= n*2; i+=2){
+		for(int j=1; j <= i; j++){
+			cout<<"* ";
+		}
+	cout<<endl;
+	}
 		
-	return 0;
+return 0;
 }

@@ -1,15 +1,13 @@
 #include<stdio.h>
-void main(){
-	int n, i, sum=0;
-	printf("Enter the number of terms: ");
+void main() {
+	int n, i, j;
+	printf("Enter the number of lines(rows):  ");
 	scanf("%d",&n);
 	
-	for(i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
+	for(i=1; i <= n*2; i+=2){
+		for(j=1; j <= i; j++){
+			printf("* ");
 		}
-	
-	printf("Sum of the Series: %d",sum);
+	printf("\n");
+	}	
 }

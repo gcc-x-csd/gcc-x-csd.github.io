@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C/C++ | Q-04</title>
+    <title>C/C++ | Q-11</title>
 
     <!-- CSS & ICONS -->
     <link rel="stylesheet" href="../assets/code-solution.css">
@@ -34,9 +34,8 @@
        <div class="heading" id="heading"> 
         <table>
         <tr>
-            <th class="q-no">Q-04: </th>
-            <th class="ques">Write a C/C++ program to compute the sum of the first n terms of the series. <br>
-              S = 1 - 2 + 3 - 4 + 5 . . . n</th>
+            <th class="q-no">Q-11: </th>
+            <th class="ques">Write a C/C++ program to compute the factors of a given number.</th>
             
         </tr>
         </table>
@@ -45,61 +44,60 @@
 <div class="solution" id="solution">
 <pre>
     <h3>Using - C</h3>
-  <div class="btn" id="btn"><a href="Q-04.c" download="Q-04.c"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
+  <div class="btn" id="btn"><a href="Q-11.c" download="Q-11.c"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
   <hr>
     <code class="language-c">
       #include<span><</span>stdio.h<span>></span>
       void main() {
-        int n, i, sum=0;
-        printf("Enter the number of terms: ");
-        scanf("%d",&n);
-        
-        for(i=1; i<=n; i++){
-            if(i%2==0)
-              sum -= i;
-            else
-              sum += i;
+        int num, i;  
+        printf("Enter a Positive Integer: ");
+        scanf("%d", &num);
+          
+        printf("Factors of %d are: ", num);
+          
+        for(i = 1; i <= num; ++i) {
+              if(num % i == 0) {
+                  printf("%d  ", i);
+              }
           }
-        
-        printf("Sum of the Series: %d",sum);
-        }
+      }
+      
     </code>
 </pre>
 <div class="output" id="output"><h4>OUTPUT</h4>
 <pre class="output-pre">
-Enter the number of terms: 7
-Sum of the Series: 4
+Enter a Positive Integer:   12
+Factors of 12 are:   1    2    3    4    6    12 
 </pre>
 </div>
 
     <pre>
         <h3>Using - C++</h3>
-        <div class="btn" id="btn"><a href="Q-04.cpp" download="Q-04.cpp"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
+        <div class="btn" id="btn"><a href="Q-11.cpp" download="Q-11.cpp"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
         <hr>
         <code class="language-cpp">
-          #include<span><</span>iostream<span>></span>
+            #include<span><</span>iostream<span>></span>
 using namespace std;
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
-	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
-		
-	return 0;
+  int num;
+  cout<<"Enter a Positive Integer: ";
+  cin>> num;
+             
+  cout<<"Factors of "<< num<< " are: ";
+                
+    for(int i=1; i <= num; ++i) {
+        if(num % i == 0) {
+          cout<< i<< "  ";
+        }
+    }            
+  return 0;
 }
       </code>
 </pre>
 <div class="output" id="output"><h4>OUTPUT</h4>
 <pre class="output-pre">
-Enter the number of terms: 4
-Sum of the Series: -2
+Enter a Positive Integer:   6
+Factors of 6 are:   1    2    3    6   
 </pre>
 </div>
 
@@ -112,9 +110,9 @@ Sum of the Series: -2
 
 <!-- NEXT PREVIIOUS BUTTONS -->
 <div class="next-prev" id="next-prev">
-  <a href="../Q-03/Q-03.html"><button>&larr; Previous</button></a>
-  <a href="https://gcc-x-csd.github.io/multi-pages/code/c_cpp.html"><button>List of all Questions</button></a>
-  <a href="../Q-05/Q-05.html"><button>Next &rarr;</button></a>
+  <div class="btn"><a href="../Q-10/Q-10.html"><button>&larr; Previous</button></a></div>
+  <div class="btn"><a href="https://gcc-x-csd.github.io/multi-pages/code/c_cpp.html"><button>List of all Questions</button></a></div>
+  <div class="btn"><a href="../Q-12/Q-12.html"><button>Next &rarr;</button></a></div>
 </div>
 </main>
 
@@ -147,11 +145,11 @@ Sum of the Series: -2
         <div class="important-links" id="important-links">
           <h3>Important Links!</h3>
             <ul>
-              <a href="https://discord.gg/tfhM3h633M"><li data-aos="fade-right" data-aos-delay="200"> <i class='bx bxs-donate-heart'></i>Want To Contribute To This project?</li></a>
-              <a href="https://discord.gg/kUAxJFjxrX"><li data-aos="fade-right" data-aos-delay="400"> <i class='bx bx-line-chart'></i>Want To Improve Answers / Codes ?</li></a>
-              <a href="https://discord.gg/8vgUcA5z2g"><li data-aos="fade-right" data-aos-delay="600"> <i class='bx bxs-file-pdf'></i>Send Latest Question Papers Here!</li></a>
-              <a href="https://discord.gg/mJBPfPACpV"><li data-aos="fade-right" data-aos-delay="800"> <i class='bx bx-desktop'></i>Send Practical Questions Here!</li></a>
-              <a href="https://discord.gg/kEUXUv4W9f"><li data-aos="fade-right" data-aos-delay="1000"> <i class='bx bxl-discord-alt'></i>Join Discussion Here!</li></a>
+              <a href="https://discord.gg/tfhM3h633M"><li data-aos="fade-right" data-aos-delay="100"> <i class='bx bxs-donate-heart'></i>Want To Contribute To This project?</li></a>
+              <a href="https://discord.gg/kUAxJFjxrX"><li data-aos="fade-right" data-aos-delay="200"> <i class='bx bx-line-chart'></i>Want To Improve Answers / Codes ?</li></a>
+              <a href="https://discord.gg/8vgUcA5z2g"><li data-aos="fade-right" data-aos-delay="300"> <i class='bx bxs-file-pdf'></i>Send Latest Question Papers Here!</li></a>
+              <a href="https://discord.gg/mJBPfPACpV"><li data-aos="fade-right" data-aos-delay="400"> <i class='bx bx-desktop'></i>Send Practical Questions Here!</li></a>
+              <a href="https://discord.gg/kEUXUv4W9f"><li data-aos="fade-right" data-aos-delay="500"> <i class='bx bxl-discord-alt'></i>Join Discussion Here!</li></a>
             </ul>
         </div>
 </div>             
