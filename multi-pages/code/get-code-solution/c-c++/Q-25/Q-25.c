@@ -1,15 +1,15 @@
 #include<stdio.h>
-void main(){
-	int n, i, sum=0;
-	printf("Enter the number of terms: ");
-	scanf("%d",&n);
+#include<ctype.h>
+
+void main() {
+    char str[1024];
+    int i;
+    printf("Enter the String:  ");
+    gets(str);
 	
-	for(i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}
+	for(i=0; str[i] != '\0'; i++){
+		str[i] = toupper(str[i]);
+	}
 	
-	printf("Sum of the Series: %d",sum);
+	printf("%s",str);
 }

@@ -1,17 +1,22 @@
 #include<iostream>
+#include<string.h>
 using namespace std;
+
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
+	string str;
+	int length, temp;
+	cout<< "Enter a string: ";
+	getline(cin,str);
 	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
-		
-	return 0;
+	length = str.length();
+	
+	for(int i=0; i < length/2; i++) {
+    	temp = str[i];
+		str[i] = str[length-1-i]; 
+    	str[length-1-i] = temp;       
+    }
+    
+cout<< "Reversed:  "<< str;
+return 0;
 }
+

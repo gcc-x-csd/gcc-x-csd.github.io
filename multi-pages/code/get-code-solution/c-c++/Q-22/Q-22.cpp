@@ -1,17 +1,18 @@
 #include<iostream>
 using namespace std;
+
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
+	string str;
+	int i=0, length=0;
+	cout<< "Enter the String:  ";
+	getline(cin,str);
 	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
+	while(str[i] != '\0') {
+		length++;
+		i++;
+	}
+	
+	cout<< "Length of the given string:  "<< length;
 		
 	return 0;
 }

@@ -27,6 +27,10 @@ body{
     background-size: cover;
 }
 
+main{
+    overflow-y: hidden;
+}
+
 header{
     position: sticky;            
     width: 100%;
@@ -214,6 +218,7 @@ hr{
 .copyright{
     height: 180px;
     padding: 5rem;
+    overflow-y: hidden;
   }
   
   .copyright p{

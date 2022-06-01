@@ -1,15 +1,20 @@
 #include<stdio.h>
-void main(){
-	int n, i, sum=0;
-	printf("Enter the number of terms: ");
-	scanf("%d",&n);
+#include<string.h>
+
+void main() {
+	char str[1024];
+	int length, i, temp;
+	printf("Enter a string: ");
+	gets(str);
 	
-	for(i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}
+	length = strlen(str);
 	
-	printf("Sum of the Series: %d",sum);
+	for(i=0; i < length/2; i++) {
+    	temp = str[i];
+		str[i] = str[length-1-i]; 
+    	str[length-1-i] = temp;       
+    }
+    
+printf("Reversed:  %s",str);
 }
+

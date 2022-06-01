@@ -72,6 +72,7 @@ span{
 #menu-icon{
     font-size: 35px;
     z-index: 10001;
+    width: min-content;
     cursor: pointer;
     color: var(--text-color);
     display: none;

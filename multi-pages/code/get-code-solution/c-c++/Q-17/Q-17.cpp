@@ -1,17 +1,31 @@
 #include<iostream>
+#include<math.h>
 using namespace std;
+
+int sumOfCube(int n);
+
 int main() {
 int n, sum=0;
-	cout<<"Enter the number of terms: ";
+	cout<<"Enter a number: ";
 	cin>> n;
 	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
+	if(n == sumOfCube(n))
+		cout<< "It is a Armstrong Number!";
+	else 
+		cout<< "It is not a Armstrong Number!";
 		
 	return 0;
 }
+
+
+int sumOfCube(int n) {
+int sum=0, cubeOfdigit, digit;
+    while(n!=0) {
+    digit = n % 10;
+    cubeOfdigit = pow(digit,3);
+    sum += cubeOfdigit;
+    n /= 10;
+    }
+return sum;
+}
+

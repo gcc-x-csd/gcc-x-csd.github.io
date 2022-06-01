@@ -1,17 +1,23 @@
 #include<iostream>
+#include<string.h>
 using namespace std;
+
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
-	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
-		
+	string str1, str2;
+	cout<< "Enter String-1:  ";
+	getline(cin,str1);
+	cout<< "Enter String-2:  ";
+	getline(cin,str2);
+
+ 	if(str1.compare(str2) == 0) {
+ 		cout<< "Strings are equal!";
+	 }
+	 else if(str1.compare(str2) < 0){
+	 	cout<< "First non-matching character in string-1 is lower (in ASCII) than that of string-2 !";
+	 }
+	 else {
+	 	cout<< "First non-matching character in string-1 is greater (in ASCII) than that of string-2 !";
+	 }
+
 	return 0;
 }

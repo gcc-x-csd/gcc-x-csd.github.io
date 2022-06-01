@@ -1,17 +1,34 @@
 #include<iostream>
 using namespace std;
+
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
+int rows, cols;
+cout<< "Enter number of Rows & Columns of Matrix:  ";
+cin>> rows >> cols;
+int matrix[rows][cols];
+
+cout<< "\nEnter elements of "<< rows << " X " << cols<< " Matrix:"<< endl;
+	for(int i=0; i<rows; i++) {
+		for(int j=0; j<cols; j++) {
+			cin>> matrix[i][j];
+		}
+	}
+cout<< "\n\nGIVEN MATRIX:\n";
+	for(int i=0; i<rows; i++) {
+		for(int j=0; j<cols; j++) {
+			cout<< matrix[i][j] << "   ";
+		}
+		cout<< endl;
+	}
 	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
-		
+cout<< "\nTRANSPOSE OF A MATRIX:\n";
+	for(int i=0; i<rows; i++) {
+		for(int j=0; j<cols; j++) {
+			cout<< matrix[j][i]<< "   ";
+		}
+		cout<< endl;
+	}
+
 	return 0;
 }
+

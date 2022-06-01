@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C/C++ | Q-04</title>
+    <title>C/C++ | Q-18</title>
 
     <!-- CSS & ICONS -->
     <link rel="stylesheet" href="../assets/code-solution.css">
@@ -34,9 +34,8 @@
        <div class="heading" id="heading"> 
         <table>
         <tr>
-            <th class="q-no">Q-04: </th>
-            <th class="ques">Write a C/C++ program to compute the sum of the first n terms of the series. <br>
-              S = 1 - 2 + 3 - 4 + 5 . . . n</th>
+            <th class="q-no">Q-18: </th>
+            <th class="ques">Write a C/C++ program to find the sum of two matrices.</th>
             
         </tr>
         </table>
@@ -45,61 +44,128 @@
 <div class="solution" id="solution">
 <pre>
     <h3>Using - C</h3>
-  <div class="btn" id="btn"><a href="Q-04.c" download="Q-04.c"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
+  <div class="btn" id="btn"><a href="Q-18.c" download="Q-18.c"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
   <hr>
     <code class="language-c">
       #include<span><</span>stdio.h<span>></span>
-      void main() {
-        int n, i, sum=0;
-        printf("Enter the number of terms: ");
-        scanf("%d",&n);
-        
-        for(i=1; i<=n; i++){
-            if(i%2==0)
-              sum -= i;
-            else
-              sum += i;
-          }
-        
-        printf("Sum of the Series: %d",sum);
-        }
-    </code>
+      
+void main() {
+	int rows, cols, i,j;
+	printf("Enter number of rows:  ");
+	scanf("%d",&rows);
+	printf("Enter number of columns:  ");
+	scanf("%d",&cols);
+	int a[rows][cols], b[rows][cols], c[rows][cols];
+	
+	printf("Enter Elements of 1st Matrix: \n");
+	for(i=0; i < rows; i++) {
+		for(j=0; j < cols; j++) {
+			scanf("%d",&a[i][j]);
+		}
+	}
+	printf("Enter Elements of 2nd Matrix: \n");
+	for(i=0; i < rows; i++) {
+		for(j=0; j < cols; j++) {
+			scanf("%d",&b[i][j]);
+		}
+	}
+	
+	for(i=0; i < rows; i++) {
+		for(j=0; j < cols; j++) {
+			c[i][j] = a[i][j] + b[i][j];
+		}
+	}
+	
+	printf("\n\nSUM OF TWO MATRICES:\n");
+	for(i=0; i < rows; i++) {
+		for(j=0; j < cols; j++) {
+			printf("%d  ",c[i][j]);
+		}
+		printf("\n");
+	}
+}    </code>
 </pre>
 <div class="output" id="output"><h4>OUTPUT</h4>
 <pre class="output-pre">
-Enter the number of terms: 7
-Sum of the Series: 4
+Enter number of rows:  2
+Enter number of columns:  2
+Enter Elements of 1st Matrix:
+10   12
+21   24
+Enter Elements of 2nd Matrix:
+12   15
+32   20
+  
+  
+SUM OF TWO MATRICES:
+22   27
+53   44
 </pre>
 </div>
 
     <pre>
         <h3>Using - C++</h3>
-        <div class="btn" id="btn"><a href="Q-04.cpp" download="Q-04.cpp"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
+        <div class="btn" id="btn"><a href="Q-18.cpp" download="Q-18.cpp"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
         <hr>
         <code class="language-cpp">
           #include<span><</span>iostream<span>></span>
 using namespace std;
+
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
+	int rows, cols, i,j;
+	cout<< "Enter number of rows:  ";
+	cin>> rows;
+	cout<< "Enter number of columns:  ";
+	cin>> cols;
+	int a[rows][cols], b[rows][cols], c[rows][cols];
 	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
-		
-	return 0;
+	cout<< "Enter Elements of 1st Matrix: \n";
+	for(i=0; i < rows; i++) {
+		for(j=0; j < cols; j++) {
+			cin>> a[i][j];
+		}
+	}
+	cout<< "Enter Elements of 2nd Matrix: \n";
+	for(i=0; i < rows; i++) {
+		for(j=0; j < cols; j++) {
+			cin>> b[i][j];
+		}
+	}
+	
+	for(i=0; i < rows; i++) {
+		for(j=0; j < cols; j++) {
+			c[i][j] = a[i][j] + b[i][j];
+		}
+	}
+	
+	cout<< "\n\nSUM OF TWO MATRICES:\n";
+	for(i=0; i < rows; i++){
+		for(j=0; j < cols; j++){
+			cout<< c[i][j]<< "  ";
+		}
+		cout<< "\n";
+	}
 }
-      </code>
+</code>
 </pre>
 <div class="output" id="output"><h4>OUTPUT</h4>
 <pre class="output-pre">
-Enter the number of terms: 4
-Sum of the Series: -2
+Enter number of rows:  3
+Enter number of columns:  3
+Enter Elements of 1st Matrix:
+10   20   30
+15   35   25
+36   21   28
+Enter Elements of 2nd Matrix:
+12   14   16
+19   17   21
+32   33   55
+  
+  
+SUM OF TWO MATRICES:
+22   34   46
+34   52   46
+68   54   83
 </pre>
 </div>
 
@@ -112,9 +178,9 @@ Sum of the Series: -2
 
 <!-- NEXT PREVIIOUS BUTTONS -->
 <div class="next-prev" id="next-prev">
-  <a href="../Q-03/Q-03.html"><button>&larr; Previous</button></a>
+  <a href="../Q-17/Q-17.html"><button>&larr; Previous</button></a>
   <a href="https://gcc-x-csd.github.io/multi-pages/code/c_cpp.html"><button>List of all Questions</button></a>
-  <a href="../Q-05/Q-05.html"><button>Next &rarr;</button></a>
+  <a href="../Q-19/Q-19.html"><button>Next &rarr;</button></a>
 </div>
 </main>
 
@@ -147,11 +213,11 @@ Sum of the Series: -2
         <div class="important-links" id="important-links">
           <h3>Important Links!</h3>
             <ul>
-              <a href="https://discord.gg/tfhM3h633M"><li data-aos="fade-right" data-aos-delay="200"> <i class='bx bxs-donate-heart'></i>Want To Contribute To This project?</li></a>
-              <a href="https://discord.gg/kUAxJFjxrX"><li data-aos="fade-right" data-aos-delay="400"> <i class='bx bx-line-chart'></i>Want To Improve Answers / Codes ?</li></a>
-              <a href="https://discord.gg/8vgUcA5z2g"><li data-aos="fade-right" data-aos-delay="600"> <i class='bx bxs-file-pdf'></i>Send Latest Question Papers Here!</li></a>
-              <a href="https://discord.gg/mJBPfPACpV"><li data-aos="fade-right" data-aos-delay="800"> <i class='bx bx-desktop'></i>Send Practical Questions Here!</li></a>
-              <a href="https://discord.gg/kEUXUv4W9f"><li data-aos="fade-right" data-aos-delay="1000"> <i class='bx bxl-discord-alt'></i>Join Discussion Here!</li></a>
+              <a href="https://discord.gg/tfhM3h633M"><li data-aos="fade-right" data-aos-delay="100"> <i class='bx bxs-donate-heart'></i>Want To Contribute To This project?</li></a>
+              <a href="https://discord.gg/kUAxJFjxrX"><li data-aos="fade-right" data-aos-delay="200"> <i class='bx bx-line-chart'></i>Want To Improve Answers / Codes ?</li></a>
+              <a href="https://discord.gg/8vgUcA5z2g"><li data-aos="fade-right" data-aos-delay="300"> <i class='bx bxs-file-pdf'></i>Send Latest Question Papers Here!</li></a>
+              <a href="https://discord.gg/mJBPfPACpV"><li data-aos="fade-right" data-aos-delay="400"> <i class='bx bx-desktop'></i>Send Practical Questions Here!</li></a>
+              <a href="https://discord.gg/kEUXUv4W9f"><li data-aos="fade-right" data-aos-delay="500"> <i class='bx bxl-discord-alt'></i>Join Discussion Here!</li></a>
             </ul>
         </div>
 </div>             

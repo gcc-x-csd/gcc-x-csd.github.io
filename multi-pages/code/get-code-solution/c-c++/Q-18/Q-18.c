@@ -1,15 +1,37 @@
 #include<stdio.h>
+
 void main(){
-	int n, i, sum=0;
-	printf("Enter the number of terms: ");
-	scanf("%d",&n);
+	int rows, cols, i,j;
+	printf("Enter number of rows:  ");
+	scanf("%d",&rows);
+	printf("Enter number of columns:  ");
+	scanf("%d",&cols);
+	int a[rows][cols], b[rows][cols], c[rows][cols];
 	
-	for(i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
+	printf("Enter Elements of 1st Matrix: \n");
+	for(i=0; i<rows; i++){
+		for(j=0; j<cols; j++){
+			scanf("%d",&a[i][j]);
 		}
+	}
+	printf("Enter Elements of 2nd Matrix: \n");
+	for(i=0; i<rows; i++){
+		for(j=0; j<cols; j++){
+			scanf("%d",&b[i][j]);
+		}
+	}
 	
-	printf("Sum of the Series: %d",sum);
+	for(i=0; i<rows; i++){
+		for(j=0; j<cols; j++){
+			c[i][j] = a[i][j] + b[i][j];
+		}
+	}
+	
+	printf("\n\nSUM OF TWO MATRICES:\n");
+	for(i=0; i<rows; i++){
+		for(j=0; j<cols; j++){
+			printf("%d  ",c[i][j]);
+		}
+		printf("\n");
+	}
 }
