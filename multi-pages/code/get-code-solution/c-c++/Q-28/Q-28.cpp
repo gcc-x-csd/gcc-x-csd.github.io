@@ -1,17 +1,28 @@
 #include<iostream>
 using namespace std;
+
+void convertToBinary(int num);
+
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
-	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
+   int num;
+   cout<< "Enter a number:  ";
+   cin>> num;
+   cout<< "DECIMAL:  "<< num;
+   convertToBinary(num);
 		
 	return 0;
+}
+
+void convertToBinary(int num) {
+	int binaryArray[1024], remainder, i=0;
+	
+	while(num != 0) {
+		remainder = num % 2;
+		binaryArray[i++] = remainder;
+		num /= 2;
+	}
+	cout<< "\nBINARY :  ";
+	for(int j=i-1; j >= 0; j--) {
+		cout<< binaryArray[j];
+	}
 }

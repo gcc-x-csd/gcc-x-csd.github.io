@@ -10,14 +10,13 @@
     overflow-x: hidden;
 }
 
-
 :root{
     --btn-bg: #121e38;
     --1st-main-bg: #0e2e47;
     --2nd-main-bg: #1E5F74;
-    --text-color: #f5e7da;
+    --text-color: #fffcf9;
     --bg-color: #030c20;
-    --about-p: #8FD6E1;
+    --about-p: #b9f3fc;
 }
 
 body{

@@ -1,17 +1,39 @@
 #include<iostream>
 using namespace std;
+
+class Base {
+public:
+	virtual void print() {
+		cout << "virtual print() of Base class"<< endl;
+	}
+
+	void show() {
+		cout << "show() of Base class"<< endl;
+	}
+};
+
+class Derived : public Base {
+public:
+	void print() {
+		cout << "print() of Derived class"<< endl;
+	}
+
+	void show() {
+		cout << "show() of Derived class"<< endl;
+	}
+};
+
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
+	Base *bptr;
+	Derived d;
+	bptr = &d;
+
+// Virtual function, binded at runtime
+	bptr->print();
+
+// Non-virtual function, binded at compile time
+	bptr->show();
 	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
-		
 	return 0;
 }
+

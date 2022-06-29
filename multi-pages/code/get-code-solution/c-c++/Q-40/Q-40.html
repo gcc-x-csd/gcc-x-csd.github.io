@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C/C++ | Q-04</title>
+    <title>C/C++ | Q-40</title>
 
     <!-- CSS & ICONS -->
     <link rel="stylesheet" href="../assets/code-solution.css">
@@ -34,72 +34,83 @@
        <div class="heading" id="heading"> 
         <table>
         <tr>
-            <th class="q-no">Q-04: </th>
-            <th class="ques">Write a C/C++ program to compute the sum of the first n terms of the series. <br>
-              S = 1 - 2 + 3 - 4 + 5 . . . n</th>
+            <th class="q-no">Q-40: </th>
+            <th class="ques">Write a C++ program to demonstrate the concept of hierarchical inheritance.</th>
             
         </tr>
         </table>
     </div>
     
 <div class="solution" id="solution">
-<pre>
-    <h3>Using - C</h3>
-  <div class="btn" id="btn"><a href="Q-04.c" download="Q-04.c"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
-  <hr>
-    <code class="language-c">
-      #include<span><</span>stdio.h<span>></span>
-      void main() {
-        int n, i, sum=0;
-        printf("Enter the number of terms: ");
-        scanf("%d",&n);
-        
-        for(i=1; i<=n; i++){
-            if(i%2==0)
-              sum -= i;
-            else
-              sum += i;
-          }
-        
-        printf("Sum of the Series: %d",sum);
-        }
-    </code>
-</pre>
-<div class="output" id="output"><h4>OUTPUT</h4>
-<pre class="output-pre">
-Enter the number of terms: 7
-Sum of the Series: 4
-</pre>
-</div>
 
     <pre>
         <h3>Using - C++</h3>
-        <div class="btn" id="btn"><a href="Q-04.cpp" download="Q-04.cpp"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
+        <div class="btn" id="btn"><a href="Q-40.cpp" download="Q-40.cpp"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
         <hr>
         <code class="language-cpp">
-          #include<span><</span>iostream<span>></span>
+// Contributed by - Debojyoti Chakraborty ( GC College, Silchar - @ Department of Computer Science )
+#include<span><</span>iostream<span>></span>
 using namespace std;
-int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
-	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
+//Base class
+class Super_A {
+	public:
+		int x, y;
+		void getData() {
+			cout<< "Enter the value of X : ";
+			cin>> x;
+			cout<< "Enter the value of Y : ";
+			cin>> y;
 		}	
-		cout<<"Sum of the Series: "<< sum;
-		
+};
+
+// class - Derived_B is derived from the base class Super_A
+class Derived_B : public Super_A {
+	public:
+		void sum() {
+			cout<<"\nThe sum of "<< x <<" and "<< y <<" is : "<< x + y << endl;
+		}
+};
+
+// class - Derived_B is also derived from base class Super_A
+class Derived_C : public Super_A {
+	public:
+		void product() {
+			cout<<"\nThe product of "<< x <<" and "<< y <<" is : "<< x * y << endl;
+		}
+};
+
+int main() {
+	Derived_B obj1; 		// Object/Instance of class Derived_B
+	Derived_C obj2; 		// Object/Instance of class Derived_C
+	
+	cout<< "Function() called using object of class Derived_B: "<< endl;
+	obj1.getData();
+	obj1.sum();
+	
+	cout<< "\n\nFunction() called using object of class Derived_C: "<< endl;
+	obj2.getData();
+	obj2.product();
+	
 	return 0;
 }
-      </code>
+</code>
 </pre>
 <div class="output" id="output"><h4>OUTPUT</h4>
 <pre class="output-pre">
-Enter the number of terms: 4
-Sum of the Series: -2
+Function() called using object of class Derived_B:
+Enter the value of X : 45
+Enter the value of Y : 65
+
+The sum of 45 and 65 is : 110
+
+
+Function() called using object of class Derived_C:
+Enter the value of X : 6
+Enter the value of Y : 5
+
+The product of 6 and 5 is : 30
+  
+
 </pre>
 </div>
 
@@ -112,9 +123,9 @@ Sum of the Series: -2
 
 <!-- NEXT PREVIIOUS BUTTONS -->
 <div class="next-prev" id="next-prev">
-  <a href="../Q-03/Q-03.html"><button>&larr; Previous</button></a>
-  <a href="https://gcc-x-csd.github.io/multi-pages/code/c_cpp.html"><button>List of all Questions</button></a>
-  <a href="../Q-05/Q-05.html"><button>Next &rarr;</button></a>
+  <div class="btn"><a href="../Q-39/Q-39.html"><button>&larr; Previous</button></a></div>
+  <div class="btn"><a href="https://gcc-x-csd.github.io/multi-pages/code/c_cpp.html"><button>List of all Questions</button></a></div>
+  <div class="btn"><a href="../Q-41/Q-41.html"><button>Next &rarr;</button></a></div>
 </div>
 </main>
 
@@ -147,17 +158,17 @@ Sum of the Series: -2
         <div class="important-links" id="important-links">
           <h3>Important Links!</h3>
             <ul>
-              <a href="https://discord.gg/tfhM3h633M"><li data-aos="fade-right" data-aos-delay="200"> <i class='bx bxs-donate-heart'></i>Want To Contribute To This project?</li></a>
-              <a href="https://discord.gg/kUAxJFjxrX"><li data-aos="fade-right" data-aos-delay="400"> <i class='bx bx-line-chart'></i>Want To Improve Answers / Codes ?</li></a>
-              <a href="https://discord.gg/8vgUcA5z2g"><li data-aos="fade-right" data-aos-delay="600"> <i class='bx bxs-file-pdf'></i>Send Latest Question Papers Here!</li></a>
-              <a href="https://discord.gg/mJBPfPACpV"><li data-aos="fade-right" data-aos-delay="800"> <i class='bx bx-desktop'></i>Send Practical Questions Here!</li></a>
-              <a href="https://discord.gg/kEUXUv4W9f"><li data-aos="fade-right" data-aos-delay="1000"> <i class='bx bxl-discord-alt'></i>Join Discussion Here!</li></a>
+              <a href="https://discord.gg/tfhM3h633M"><li data-aos="fade-right" data-aos-delay="100"> <i class='bx bxs-donate-heart'></i>Want To Contribute To This project?</li></a>
+              <a href="https://discord.gg/kUAxJFjxrX"><li data-aos="fade-right" data-aos-delay="200"> <i class='bx bx-line-chart'></i>Want To Improve Answers / Codes ?</li></a>
+              <a href="https://discord.gg/8vgUcA5z2g"><li data-aos="fade-right" data-aos-delay="300"> <i class='bx bxs-file-pdf'></i>Send Latest Question Papers Here!</li></a>
+              <a href="https://discord.gg/mJBPfPACpV"><li data-aos="fade-right" data-aos-delay="400"> <i class='bx bx-desktop'></i>Send Practical Questions Here!</li></a>
+              <a href="https://discord.gg/kEUXUv4W9f"><li data-aos="fade-right" data-aos-delay="500"> <i class='bx bxl-discord-alt'></i>Join Discussion Here!</li></a>
             </ul>
         </div>
 </div>             
 <!--DISCORD API -->
 
-  <div class="discord-api" id="discoed-api">
+  <div class="discord-api" id="discord-api">
   
     <iframe src="https://discord.com/widget?id=976765862583341096&theme=dark" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         
@@ -190,7 +201,7 @@ Sum of the Series: -2
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 1000,
+    duration: 600,
     offset: 80
   });
 </script>

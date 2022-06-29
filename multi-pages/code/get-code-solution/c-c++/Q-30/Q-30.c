@@ -1,15 +1,32 @@
 #include<stdio.h>
-void main(){
-	int n, i, sum=0;
-	printf("Enter the number of terms: ");
-	scanf("%d",&n);
+
+void displayArray(int array[], int size) {
+	int i;
+	for(i=0; i<size; i++) {
+		printf("%d  ",array[i]);
+	}
+	printf("\n");
+}
+
+void main() {
+	int size, temp, i;
+	printf("Enter the size of array:  ");
+	scanf("%d", &size);
+	int array[size];
 	
-	for(i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}
+	printf("Enter %d Elements:\n");
+	for(i=0; i < size; i++) {
+		scanf("%d", &array[i]);	
+	}
 	
-	printf("Sum of the Series: %d",sum);
+	printf("ORIGINAL ARRAY: ");
+	displayArray(array,size);
+	
+	for(i=0; i < size/2; i++) {
+		temp = array[i];
+		array[i] = array[size-1-i];
+		array[size-1-i] = temp;
+	}
+	printf("REVERSED ARRAY: ");
+	displayArray(array,size);
 }

@@ -1,17 +1,36 @@
 #include<iostream>
 using namespace std;
-int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
+
+class Marks {
+	int internal_marks;
+	int external_marks;
 	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
+	public:
+		Marks() {
+			internal_marks = 0;
+			external_marks = 0;
 		}	
-		cout<<"Sum of the Series: "<< sum;
-		
+		Marks(int internal_marks, int external_marks) {
+			this->internal_marks = internal_marks;
+			this->external_marks = external_marks;
+		}
+		void show() {
+			cout << internal_marks << endl << external_marks << endl;
+		}
+
+//	Overloading Binary Operator +		
+		Marks operator+(Marks m) {
+			Marks temp;
+			temp.internal_marks = internal_marks + m.internal_marks;
+			temp.external_marks = external_marks + m.external_marks;
+			return temp;
+		}	
+};
+
+int main() {
+	Marks m1(10,20), m2(5,15);
+	Marks m3 = m1 + m2;
+	
+	m3.show();
 	return 0;
 }

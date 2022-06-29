@@ -1,17 +1,27 @@
 #include<iostream>
 using namespace std;
+
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
-	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
+char ch;
+int num1, num2;
+input:
+cout<< "Enter Expression:  ";
+cin>> num1 >> ch >> num2;
+
+switch(ch) 
+{
+	case '+': cout<< num1 << " + " << num2 << " = " << (num1 + num2) << endl;
+			  break;
+	case '-': cout<< num1 << " - " << num2 << " = " << (num1 - num2) << endl;
+			  break;
+	case '*': cout<< num1 << " X " << num2 << " = " << (num1 * num2) << endl;
+			  break;
+	case '/': cout<< num1 << " / " << num2 << " = " << (num1 / (float)num2) << endl;
+			  break;
+	default:  system("cls");
+			  cout<< "Enter a valid expression! \n"<< endl;
+			  goto input;
+} 
 		
 	return 0;
 }

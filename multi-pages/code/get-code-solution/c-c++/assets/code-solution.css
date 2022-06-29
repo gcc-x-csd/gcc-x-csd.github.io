@@ -16,7 +16,7 @@
     --bg-main: #121e38;
     --bg-main-lite: #1E5F74;
     --text-color: #f5e7da;
-    --about-p: #8FD6E1;
+    --about-p: #b9f3fc;
     --output-bg: #000000d3;
 }
 
@@ -216,12 +216,13 @@ iframe{
 }
 
 .footer-container{
+    margin-top: 6rem;               /*Added*/
     display: flex;
     justify-content: center;
     padding: 2rem;
     padding-right: 6rem;
     padding-left: 6rem;
-    background-color: #030c20d2;
+    background-color: var(--bg-main);
     height: auto;
 }
 .links{

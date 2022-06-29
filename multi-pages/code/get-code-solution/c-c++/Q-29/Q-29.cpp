@@ -1,17 +1,30 @@
 #include<iostream>
+#include<math.h>
+#include<string.h>
+#include<algorithm>
 using namespace std;
+
+void convertToDecimal(string binary);
+
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
+	string binary;
+	cout<< "Enter binary number:  ";
+	getline(cin,binary);
 	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
+	cout<<"BINARY :  "<< binary;
+	convertToDecimal(binary);
 		
 	return 0;
+}
+
+void convertToDecimal(string binary) {
+	int eqv_decimal = 0, length = binary.length();
+	reverse(binary.begin(), binary.end());
+	
+	for(int i=0; i<length; i++) {	
+		if(binary[i]=='1') {
+			eqv_decimal += pow(2,i);	
+		}	
+	}
+	cout<< "\nDECIMAL:  "<< eqv_decimal;
 }
