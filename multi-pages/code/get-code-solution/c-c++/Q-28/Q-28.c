@@ -1,15 +1,25 @@
 #include<stdio.h>
-void main(){
-	int n, i, sum=0;
-	printf("Enter the number of terms: ");
-	scanf("%d",&n);
+
+void convertToBinary(int num);
+
+void main() {
+	int num;
+	printf("Enter a number:  ");
+	scanf("%d",&num);
+	printf("DECIMAL:  %d",num);
+	convertToBinary(num);
+}
+
+void convertToBinary(int num) {
+	int binaryArray[1024], remainder, i=0, j;
 	
-	for(i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}
-	
-	printf("Sum of the Series: %d",sum);
+	while(num != 0) {
+		remainder = num % 2;
+		binaryArray[i++] = remainder;
+		num /= 2;
+	}
+	printf("\nBINARY :  ");
+	for(j=i-1; j >= 0; j--) {
+		printf("%d",binaryArray[j]);
+	}
 }

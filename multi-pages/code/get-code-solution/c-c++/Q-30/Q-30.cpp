@@ -1,17 +1,34 @@
 #include<iostream>
 using namespace std;
+
+void displayArray(int array[], int size) {
+	for(int i=0; i<size; i++) {
+		cout<< array[i]<< "  ";
+	}
+	cout<< endl;
+}
+
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
+int size, temp, i;
+	cout<< "Enter the size of array:  ";
+	cin>> size;
+	int array[size];
 	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
+	cout<< "Enter "<< size <<" Elements:"<< endl;
+	for(i=0; i < size; i++) {
+		cin>> array[i];	
+	}
+	
+	cout<< "ORIGINAL ARRAY: ";
+	displayArray(array,size);
+	
+	for(i=0; i < size/2; i++) {
+		temp = array[i];
+		array[i] = array[size-1-i];
+		array[size-1-i] = temp;
+	}
+	cout<< "REVERSED ARRAY: ";
+	displayArray(array,size);
 		
 	return 0;
 }

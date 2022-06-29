@@ -1,15 +1,25 @@
 #include<stdio.h>
-void main(){
-	int n, i, sum=0;
-	printf("Enter the number of terms: ");
-	scanf("%d",&n);
-	
-	for(i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}
-	
-	printf("Sum of the Series: %d",sum);
+
+void main() {
+char ch;
+int num1, num2;
+input: 
+printf("Enter Expression:  ");
+scanf("%d %c %d", &num1, &ch, &num2);
+
+switch(ch)
+{
+	case '+': printf("%d + %d = %d",num1, num2, (num1 + num2));
+			  break;
+	case '-': printf("%d - %d = %d",num1, num2, (num1 - num2));
+			  break;
+	case '*': printf("%d X %d = %d",num1, num2, (num1 * num2));
+			  break;
+	case '/': printf("%d / %d = %.2f",num1, num2, (num1 / (float)num2));
+			  break;
+	default:  system("cls");
+			  printf("Enter a valid expression! \n\n");
+			  goto input;
+}
+
 }

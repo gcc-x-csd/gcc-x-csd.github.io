@@ -1,17 +1,43 @@
 #include<iostream>
 using namespace std;
+
 int main() {
-int n, sum=0;
-	cout<<"Enter the number of terms: ";
-	cin>> n;
+  int size, element;
+  cout<< "Enter the size of the Array:  ";
+  cin>> size;
+  int arr[size] , pos[size] , posIndex=0;
+  cout<< "Enter "<< size << " Elements: "<< endl;
+  for(int i=0; i < size; i++) {
+    cin>> arr[i];
+  }
+  system("cls");
+
+  //Displaying Array
+  cout<< "Given Array:  ";
+  for(int i=0; i < size; i++) {
+    cout<< arr[i]<< "  ";
+  }
+
+  cout<< "\n\nEnter the element to be searched:  ";
+  cin>> element;
 	
-		for(int i=1; i<=n; i++){
-			if(i%2==0)
-				sum -= i;
-			else
-				sum += i;
-		}	
-		cout<<"Sum of the Series: "<< sum;
-		
-	return 0;
+
+  for(int i=0; i < size; i++) {
+    if(arr[i] == element) {
+      pos[posIndex++] = i+1;
+    }
+  }
+  
+  if(posIndex != 0) {
+  	cout<< element<< " found at position:  ";
+  	for(int i=0; i<posIndex; i++) {
+  		cout<< pos[i]<< ",  ";
+	}
+	return 1;  
+  } 
+  else {
+  	cout<< element<< " not found in this Array!"<< endl;
+    return 0;
+  }
+    
 }
