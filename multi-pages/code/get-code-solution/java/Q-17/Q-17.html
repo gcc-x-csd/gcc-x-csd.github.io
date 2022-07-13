@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA | Q-17</title>
+
+    <!-- CSS & ICONS -->
+    <link rel="stylesheet" href="../assets/code-solution.css">
+    <link rel="stylesheet" href="../assets/prism.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ANIMATION LIBRARY -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    
+<!-- HEADER & NAVBAR -->
+<header>
+    <a href="https://gcc-x-csd.github.io/" class="logo"> GCC<span> X </span> CSD</a>
+</header>
+    
+    <!-- MAIN SECTION -->
+    <main data-aos="fade-up">
+       <div class="code" id="code">
+           <div class="heading" id="heading"> 
+            <table>
+            <tr>
+                <th class="q-no">Q-17: </th>
+                <th class="ques">Write a JAVA program to show the uses of static data members and static methods.</th>
+                
+            </tr>
+            </table>
+        </div>
+        
+<div class="solution" id="solution">
+
+<pre>
+  <h3>static members & methods</h3>
+<div class="btn" id="btn"><a href="StaticMemberMethods.java" download="StaticMemberMethods.java"><button class="source-code"><i class='bx bx-download'></i><p>&nbsp;Source Code</p></button></a></div>
+<hr>
+<code class="language-java">
+// Contributed by - Anuj Das ( GC College, Silchar - @ Department of Computer Science )
+
+import java.util.Scanner;
+
+class DemoStatic {
+	static final float PI = 3.14f;							//static data member 
+	
+	static String ReverseString(String str) {				    // static method
+		char ch=' ';
+		String strrev="";
+		for(int i = str.length()-1; i >= 0; i--) {
+			ch = str.charAt(i);
+			strrev += ch;
+		}
+		return strrev;
+	}
+
+	static void PalindromeCheck(String str) {				// static method
+		String strEntered = str;
+		String RevString = ReverseString(str);
+		if(strEntered.equals(RevString)) {
+			System.out.println("\nIt is a Palindrome.");
+		}
+		else {
+			System.out.println("\nIt is not a Palindrome.");
+		}
+	}
+}
+
+class StaticMemberMethods {
+	public static void main(String[ ] args){
+		Scanner input = new Scanner(System.in);
+		System.out.println("\nThe value of PI is " + DemoStatic.PI+"\n");
+		System.out.print("Enter a String to Check:  ");
+		String str = input.nextLine();
+		System.out.println("\nGiven String is: "+str);
+		String revString = DemoStatic.ReverseString(str);
+		System.out.println("Reversed String is : "+revString);
+		DemoStatic.PalindromeCheck(str);
+		
+	}
+}
+
+</code>
+</pre>
+<div class="output" id="output"><h4>OUTPUT</h4>
+<pre class="output-pre">
+cmd->  javac  StaticMemberMethods.java
+cmd->  java  StaticMemberMethods
+
+The value of PI is 3.14
+
+Enter a String to Check:  wow
+
+Given String is: wow
+Reversed String is : wow
+
+It is a Palindrome.
+
+    
+</pre>
+</div>
+
+
+
+
+<!-- Insert Code Above -->
+</div>   
+</div>
+
+
+<!-- NEXT PREVIIOUS BUTTONS -->
+<div class="next-prev" id="next-prev">
+  <div class="btn"><a href="../Q-16/Q-16.html"><button>&larr; Previous</button></a></div>
+  <div class="btn"><a href="https://gcc-x-csd.github.io/multi-pages/code/java.html"><button>List of all Questions</button></a></div>
+  <div class="btn"><a href="../Q-18/Q-18.html"><button>Next &rarr;</button></a></div>
+</div>
+</main>
+    
+    
+    
+    
+    
+    
+    
+<!-- FOOTER , SUPPORT & COPYRIGHT SECTION -->
+<footer>
+    <div class="footer-container" id="footer-container"  data-aos="fade-up">
+
+        <div class="links" id="links">
+          <div class="support-us" id="support-us">
+            <h3>Support Our Project!</h3>
+            <p>Please consider a gift of $1 because it takes a lot of time and effort to build, update and maintain this project. Hope you find this Website helpful. You can show some love and support by buying a virtual coffee for me!
+              <br><br> 
+              <b>Thank You! 💕</b> 
+              <br><br><br>
+            </p>
+        
+      <div class="donate-coffee" id="donate-coffee">      
+           
+      <a href="https://www.buymeacoffee.com/anujdas10"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=anujdas10&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+
+      </div>
+    </div>
+<hr>
+        <div class="important-links" id="important-links">
+          <h3>Important Links!</h3>
+            <ul>
+              <a href="https://discord.gg/tfhM3h633M"><li data-aos="fade-right" data-aos-delay="100"> <i class='bx bxs-donate-heart'></i>Want To Contribute To This project?</li></a>
+              <a href="https://discord.gg/kUAxJFjxrX"><li data-aos="fade-right" data-aos-delay="200"> <i class='bx bx-line-chart'></i>Want To Improve Answers / Codes ?</li></a>
+              <a href="https://discord.gg/8vgUcA5z2g"><li data-aos="fade-right" data-aos-delay="300"> <i class='bx bxs-file-pdf'></i>Send Latest Question Papers Here!</li></a>
+              <a href="https://discord.gg/mJBPfPACpV"><li data-aos="fade-right" data-aos-delay="400"> <i class='bx bx-desktop'></i>Send Practical Questions Here!</li></a>
+              <a href="https://discord.gg/kEUXUv4W9f"><li data-aos="fade-right" data-aos-delay="500"> <i class='bx bxl-discord-alt'></i>Join Discussion Here!</li></a>
+            </ul>
+        </div>
+</div>             
+<!--DISCORD API -->
+
+  <div class="discord-api" id="discoed-api">
+  
+    <iframe src="https://discord.com/widget?id=976765862583341096&theme=dark" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        
+  </div>
+
+</div>
+       
+<div class="copyright" id="copyright">
+  <p>
+    2022 &copy;<b>ANUJ DAS</b> - ALL RIGHTS RESERVED. <br> DEVELOPED BY: <a href="https://twitter.com/CyBeRNaTiCS_"><b>ANUJ DAS</b> </a> 
+  </p>
+</div>
+</footer>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<!-- COFFEE WIDGET-->
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="anujdas10" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FFDD00" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+</body>
+<script src="../assets/prism.js"></script>
+<!-- LINK TO JS ANIMATION LIBRARY -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 600,
+    offset: 80
+  });
+</script>
+</html>
