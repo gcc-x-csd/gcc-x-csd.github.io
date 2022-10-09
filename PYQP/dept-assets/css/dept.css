@@ -1,0 +1,483 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Cinzel', serif; */
+    /* font-family: 'Square Peg', cursive; */
+    font-family: 'Merriweather', serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+    
+}
+
+:root{
+    --btn-text: #010712;
+    --1st-main-bg: #06291b;
+    --2nd-main-bg: #01bfaf;
+    --text-color: #eefcf9;
+    --bg-color: #011012;
+    --about-p: #8FD6E1;
+    --button-color: #36afff;
+    --heading-size: 2rem;
+    --sub-heading-size: 1rem;
+}
+
+body{
+    background-color: var(--bg-color);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23F00'/%3E%3Cstop offset='1' stop-color='%23FC0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='3.3'%3E%3Cpath transform='translate(-77 17.6) rotate(11 1409 581) scale(1.044)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='1.1' transform='translate(-44 44) rotate(13.2 800 450) scale(1.022)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(39.6 -132) rotate(132 401 736) scale(1.022)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='1'%3E%3Cpath transform='translate(264 -17.6) rotate(4.4 150 345) scale(0.956)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='2.2' transform='translate(-176 -110) rotate(158.4 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-264 88) rotate(26.4 1400 132)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+ }
+ section {
+    overflow-x: hidden;
+ }
+
+header{
+    background-color: var(--bg-color);
+    position: sticky;            
+    width: 100%;
+    height: 5rem;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 8%;
+    transition: .3s;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+span {
+    color: rgb(252, 57, 57);
+}
+
+.logo img{
+    width: 60px;
+    height: 60px;
+}
+.logo h2{
+    font-size: 2rem;
+}
+
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: var(--text-color);
+    font-size: .9rem;
+    padding: 10px 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+   border-radius: 2px;
+}
+.navbar a:hover{
+    /* background: var(--text-color); */
+    background-image: linear-gradient(90deg, var(--2nd-main-bg) 0%, #095aab 100%); 
+    font-weight: 700;
+    color: var(--bg-color);
+    border-radius: 5px;
+    transition: .2s;
+}
+
+#menu-icon{
+    font-size: 35px;
+    z-index: 10001;
+    width: min-content;
+    cursor: pointer;
+    color: var(--text-color);
+    display: none;
+}
+
+.dept {
+    width: 100%;
+    padding: 3rem;
+}
+
+.heading{
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+}
+.heading h1 {
+    font-size: var(--heading-size);
+    color: var(--2nd-main-bg);
+    font-weight: 600;
+}
+
+.heading h2{
+    font-size: var(--sub-heading-size);
+    color: var(--about-p);
+    font-weight: 300;
+}
+
+
+.choose-dept {
+    padding-top: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    font-size: 1.2rem;
+    color: var(--2nd-main-bg);
+    margin-right: 2rem;
+    padding-top: .8rem;
+}
+
+select {
+    width: 20rem;
+    height: 3rem;
+    background-color: var(--btn-text);
+    color: var(--2nd-main-bg);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    padding-left: .8rem;
+    font-family: monospace;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+option {
+    color: var(--text-color);
+    font-family: monospace;
+    font-weight: 300;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    padding: 4rem 0;
+}
+
+button {
+    width: 12rem;
+    height: 3rem;
+    background-color: var(--about-p);
+    border-radius: .5rem;
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+button:hover {
+    cursor: pointer;
+    background-color: var(--2nd-main-bg);
+    transition: .5s;
+}
+
+
+
+/* JOIN COMMUNITY */
+.join-community {
+    margin-top: 8rem;
+    padding-top: 3rem;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+.contacts-info{
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-around; */
+    margin: 2rem;
+    width: 100%;
+    padding: 1.2rem 8%; 
+}
+
+.discord-api{
+    padding: 1.2rem; 
+    width: 50%;
+}
+.discord-api h2, .imp-links h2{
+    margin-top: 2.5rem;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+.discord-api iframe{
+    margin-top: 2.5rem;
+    width: 70%;
+    height: 30rem;
+}
+
+.imp-links{
+    padding: 1.2rem;
+    margin-left: 2rem;
+    width: 50%;
+}
+.imp-links ul {
+    margin-top: 1.2rem;
+}
+.imp-links ul a {
+    font-weight: 300;
+    color: var(--about-p);
+    font-size: 1rem;
+}
+.imp-links i{
+    margin-top: 1rem;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+#contributors i{
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+
+
+/* COPYRIGHT SECTION */
+.wave-cr {
+    margin: 0;
+    margin-top: -6rem;
+    padding: 0;
+}
+.wave-cr svg {
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: -1rem;
+    z-index: -1;
+}
+.wave-cr svg path {
+    position: relative;
+    margin-top: 2rem;
+}
+.wave-cr p{
+    position: relative;
+    width: 100%;
+    /* height: 3rem; */
+    margin: 0;
+    /* margin-top: 16rem; */
+    padding: 0;
+    padding-bottom: 3rem;
+    background-color: #157650;
+    text-align: center;
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+
+
+
+/* **************************************************************************************************************************** */
+/* ALL MEDIA QUERIES */
+
+
+@media (max-width: 960px){
+    .contacts-info {
+        padding: 1rem 2%;
+    }
+
+    .discord-api {
+        padding-left: 0;
+    }
+    .discord-api iframe {
+        width: 90%;
+    }
+    .imp-links {
+        margin-left: -2rem;
+    }
+    .imp-links ul a {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 830px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding: 18px 3%;
+    }
+  .logo{
+    display: flex;
+  }
+  
+    #menu-icon{
+        display: block;
+        color: var(--text-color);
+        text-align: right;
+    }
+    .navbar{
+        position: absolute;
+        top: -500px;           
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 70%);
+        text-align: left;
+        transition: .5s ease;
+    }
+    .navbar a{
+        display: block;
+        padding: 1rem;
+        font-size: 1rem;
+        border-left: 3px solid var(--about-p);
+        margin: .5rem;
+        display: block;
+    }
+    .navbar.active{
+        transition: .6s;
+        top: 100%;
+  
+    }
+}
+
+
+@media (max-width: 680px) {
+    
+    label {
+        font-size: 1rem;
+    }
+
+    select {
+        width: 18rem;
+        height: 3rem;
+    }
+}
+
+
+@media (max-width: 645px) {
+
+    .choose-dept {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        padding-top: 5rem;
+    }
+
+    label {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        align-self: center;
+    }
+    select {
+        width: 20rem;
+        align-self: center;
+    }
+    
+.contacts-info {
+    flex-direction: column;
+}
+
+
+.discord-api{
+    width: 93%;
+}
+
+.imp-links{
+    width: 100%;
+}
+
+.discord-api iframe {
+    width: 100%;
+}
+.discord-api h2, .imp-links h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.imp-links ul a {
+    font-size: 1rem;
+}
+    .wave-cr {
+        margin-top: 2rem;
+    }
+}
+
+
+
+@media (max-width: 580px) {
+    .dept {
+        padding: 0;
+    }
+    label {
+        font-size: 1.2rem;
+    }
+    .heading h1 {
+        font-size: 1.5rem;
+    }
+    .heading h2 {
+        font-size: .8rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .discord-api {
+        width: 90%;
+    }
+
+    .logo h2 {
+        font-size: 1.5rem;
+    }
+
+    .heading h1 {
+        font-size: 1.3rem;
+    }
+
+    .imp-links ul a {
+        font-size: .9rem;
+    }
+
+    .wave-cr {
+        margin-top: 1rem;
+    }
+    .wave-cr svg {
+        margin-bottom: -.5rem;
+       }
+    
+       .wave-cr p {
+        font-size: .8rem;
+       }
+    }
+
+
+@media (max-width: 360px) {
+    .heading h1 {
+        font-size: 1.2rem;
+    }
+
+    select {
+        width: 16rem;
+    }
+
+    .imp-links ul a {
+        font-size: .8rem;
+    }
+
+    .contacts-info {
+        padding: 0;
+    }
+
+    .discord-api {
+        width: 87%;
+    }
+
+    .discord-api h2 {
+        font-size: 1rem;
+    }
+
+    .imp-links h2 {
+        font-size: 1rem;
+    }
+
+    .imp-links ul a {
+        font-size: .7rem;
+    }
+}
