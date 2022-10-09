@@ -852,6 +852,9 @@ span {
 }
 
 @media (max-width: 680px){
+   section {
+    overflow-y: hidden;
+   }
 .contacts-info {
     display: flex;
     flex-direction: column-reverse;
