@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCC❌CSD</title>
+    <link rel="shortcut icon" href="dept-assets/img/gccxcsdlogo.png" type="image/x-icon">
+
+    
+        <!-- ICONS -->
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="dept-assets/css/dept.css">
+        <!-- ANIMATION LIBRARY -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <!-- JS -->
+        <script src="dept-assets/js/toggle-menu.js" defer></script>
+        <script src="dept-assets/js/options-target.js" defer></script>
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <header>
+            <!-- <a href="#" class="logo">GCC<span> X </span> CSD</a> -->
+            <div class="logo">
+        <img src="dept-assets/img/logo.png" alt="logo">
+        <h2>GCC <span>X</span> CSD</h2>
+    </div>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#books">CS-Books</a></li>
+        <li><a href="#dept">PYQP</a></li>
+        <li><a href="#join">Join Community</a></li>
+      </ul>
+</header>
+
+
+<section class="dept" id="dept">
+    <div class="heading" id="heading">
+        <h1 data-aos="zoom-out">CHOOSE YOUR DEPARTMENT</h1>
+        <h2 data-aos="zoom-out">Get previous year question papers of your department.</h2>
+    </div>
+    
+    <div class="choose-dept" id="choose-dept">
+        <label for="depts">Select your department:</label>
+        
+        <select name="dept" id="departments" onchange="location.reload();">
+            <option value="1">Computer Science</option>
+            <option value="2">Physics</option>
+            <option value="3">Chemistry</option>
+            <option value="4">Mathematics</option>
+            <option value="5">Statistics</option>
+        </select> 
+    </div>
+    <div class="button" id="button">
+        <button type="submit" onclick="visitDept(text);">Get PYQP</button>
+    </div>
+</section>
+
+
+
+<!-- JOIN COMMUNITY -->
+<section class="join-community" id="join">
+        <div class="heading">
+            <h1>JOIN COMMUNITY</h1>
+            <h2>Official Discord Server & Important Links</h2>
+        </div>
+        <div class="contacts-info">
+            
+            <div class="discord-api" data-aos="fade-up">
+                <h2>Join Our Discord Server!</h2>
+                <iframe src="https://discord.com/widget?id=976765862583341096&theme=dark" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+
+            <div class="imp-links">
+                <h2>Want to Contribute?</h2>
+                <ul>
+                    <a href="https://discord.gg/tfhM3h633M"><li data-aos="fade-right" data-aos-delay="100"> <i class='bx bxs-donate-heart'></i>Want To Contribute To This project?</li></a>
+                    <a href="https://discord.gg/kUAxJFjxrX"><li data-aos="fade-right" data-aos-delay="200"> <i class='bx bx-line-chart'></i>Want To Improve Codes ?</li></a>
+                    <a href="https://discord.gg/8vgUcA5z2g"><li data-aos="fade-right" data-aos-delay="300"> <i class='bx bxs-file-pdf'></i>Send Latest Question Papers Here!</li></a>
+                    <a href="https://discord.gg/mJBPfPACpV"><li data-aos="fade-right" data-aos-delay="400"> <i class='bx bx-desktop'></i>Send Practical Questions Here!</li></a>
+                    <a href="https://discord.gg/kEUXUv4W9f"><li data-aos="fade-right" data-aos-delay="500"> <i class='bx bxl-discord-alt'></i>Join Discussion Here!</li></a>
+                  </ul>
+                  <h2>Quick Links!</h2>
+                  <ul id="contributors">
+                    <a href="#"><li data-aos="fade-left" data-aos-delay="100"> <i class='bx bx-link'></i>GCC❌CSD - HOME</li></a>
+                    <a href="#"><li data-aos="fade-left" data-aos-delay="200"> <i class='bx bx-link'></i>GCC❌CSD - CS-BOOKS</li></a>
+                    <a href="#"><li data-aos="fade-left" data-aos-delay="300"> <i class='bx bx-link'></i>GCC❌CSD - ABOUT</li></a>
+                    <a href="#"><li data-aos="fade-left" data-aos-delay="400"> <i class='bx bx-link'></i>github.com/anuj-das-10/</li></a>
+                    <!-- <a href="#"><li data-aos="fade-right" data-aos-delay="500"> <i class='bx bxs-star' ></i>Debojyoti Chakraborty</li></a> -->
+                </ul>
+            </div>
+        </div> 
+</section>
+
+
+
+<!-- WAVE EFFECT -->
+<section class="wave-cr" id="wave-cr">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#157650" fill-opacity="1" d="M0,96L80,112C160,128,320,160,480,165.3C640,171,800,149,960,165.3C1120,181,1280,235,1360,261.3L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+    </svg>
+    <p>2022 &copy; ANUJ DAS - ALL RIGHT RESERVED.</p>
+</section>
+
+
+</body>
+<!-- LINK TO JS ANIMATION LIBRARY -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 500,
+    offset: 100
+  });
+</script>
+</html>
