@@ -61,7 +61,7 @@
     <div class="choose-dept" id="choose-dept">
         <label for="depts">Select your department:</label>
         
-        <select name="dept" id="departments" onchange="location.reload();">
+        <select name="dept" id="departments">
             <option value="1">Computer Science</option>
             <option value="2">Physics</option>
             <option value="3">Chemistry</option>
@@ -70,7 +70,7 @@
         </select> 
     </div>
     <div class="button" id="button">
-        <button type="submit" onclick="visitDept(text);">Get PYQP</button>
+        <button type="submit" onclick="visitDept();">Get PYQP</button>
     </div>
 </section>
 

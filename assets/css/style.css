@@ -727,6 +727,9 @@ span {
     .questions {
         height: auto;
     }
+    .solution a {
+        margin-bottom: 5rem;
+    }
   
 }
 
