@@ -342,7 +342,7 @@ span {
     padding: 0 1rem;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    /* align-items: center; */
     margin-top: 2rem;
 }
 .solution a i {
@@ -683,6 +683,10 @@ span {
     .card {
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+
+    .solution a {
+        height: 1rem;
     }
 
     .solution a i {
