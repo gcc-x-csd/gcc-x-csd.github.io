@@ -14,25 +14,17 @@ function visitDept() {
         window.location.assign("comp-sc.html")
     }
     if(value == 2 && text === 'Physics') {
-        fetch('physics.html')
-        .then(response=> response.text())
-        .then(texts=> document.querySelector('html').innerHTML = texts);
+        window.location.assign("physics.html")
     }
     if(value == 3 && text === 'Chemistry') {
-        fetch('chemistry.html')
-        .then(response=> response.text())
-        .then(texts=> document.querySelector('html').innerHTML = texts);
+        window.location.assign("chemistry.html")
 
     }
     if(value == 4 && text === 'Mathematics') {
-        fetch('maths.html')
-        .then(response=> response.text())
-        .then(texts=> document.querySelector('html').innerHTML = texts);
+        window.location.assign("maths.html")
     }
     if(value == 5 && text === 'Statistics') {
-        fetch('statistics.html')
-        .then(response=> response.text())
-        .then(texts=> document.querySelector('html').innerHTML = texts);
+        window.location.assign("statistics.html")
     }
    
 }
