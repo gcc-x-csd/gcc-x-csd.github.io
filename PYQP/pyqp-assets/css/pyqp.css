@@ -304,10 +304,12 @@ hr {
     box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.775);
     text-align: left;
     transition: .2s ease;
+    width: 8.5rem;
+    margin-right: 0.8rem;
 }
 .menu a{
     display: block;
-    padding: .5rem;
+    padding: .2rem;
     font-size: 1rem;
     border-left: 3px solid var(--2nd-main-bg);
     color: var(--2nd-main-bg);
