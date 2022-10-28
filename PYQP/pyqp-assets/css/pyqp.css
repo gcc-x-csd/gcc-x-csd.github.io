@@ -200,7 +200,7 @@ span {
 .sem-1 {
     width: 100%;
     padding: 0 8%;
-    margin-top: 10rem;
+    margin-top: 15rem;
 }
 
 .sem-1 h2 {
@@ -246,6 +246,7 @@ hr {
     align-items: center;
     margin-right: 3rem;
     color: var(--2nd-main-bg);
+    margin-top: 0.6rem;
 }
 
 .papers ul li a {
@@ -304,12 +305,13 @@ hr {
     box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.775);
     text-align: left;
     transition: .2s ease;
-    width: 8.5rem;
+    width: 7.5rem;
     margin-right: 0.8rem;
+    border-radius: 5px;
 }
 .menu a{
     display: block;
-    padding: .2rem;
+    padding: .5rem;
     font-size: 1rem;
     border-left: 3px solid var(--2nd-main-bg);
     color: var(--2nd-main-bg);
@@ -678,9 +680,9 @@ hr {
         width: 100%;
     }
 
-    .menu li a {
+    /* .menu li a {
         font-size: .8rem;
-    }
+    } */
     .imp-links h2, .discord-api h2 {
         text-align: center;
     }
